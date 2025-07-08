@@ -1,10 +1,11 @@
 'use client';
 
-import {Typewriter} from 'react-simple-typewriter';
 import {motion} from 'framer-motion';
 import Image from 'next/image';
-import ParticlesBackground from '../ui/ParticlesBackground';
 import {BiChevronDown} from 'react-icons/bi';
+import ParticlesBackground from '../ui/ParticlesBackground';
+import TypewriterHeading from '../ui/TypewriterHeading';
+import GradientName from '../ui/GradientName';
 
 const stats = [
   {title: 'Projects', value: 15},
@@ -20,36 +21,11 @@ export default function HeroSection() {
       <div className="relative z-10 min-h-screen w-full px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Left Content */}
         <div className="flex-1 space-y-6 text-center md:text-left">
-          <motion.h1
-            initial={{scale: 0.9, opacity: 0}}
-            animate={{scale: 1, opacity: 1}}
-            transition={{duration: 1}}
-            className="text-4xl md:text-6xl font-bold text-white"
-          >
-            Hi, I&apos;m Harshit Kishor
-          </motion.h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white">
+            Hi, I&apos;m <GradientName text="Harshit Kishor" />
+          </h1>
 
-          <motion.p
-            initial={{opacity: 0, y: 20}}
-            animate={{opacity: 1, y: 0}}
-            transition={{delay: 0.3, duration: 1}}
-            className="text-lg md:text-2xl font-medium text-gray-300"
-          >
-            <Typewriter
-              words={[
-                'Mobile App Developer',
-                'React Native Specialist',
-                'Firebase Enthusiast',
-                'Lifelong Learner',
-              ]}
-              loop
-              cursor
-              cursorStyle="|"
-              typeSpeed={60}
-              deleteSpeed={40}
-              delaySpeed={1500}
-            />
-          </motion.p>
+          <TypewriterHeading />
 
           {/* Stats */}
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
@@ -76,7 +52,7 @@ export default function HeroSection() {
           className="flex-1 flex justify-center"
         >
           <Image
-            src="/illustration/illustration1.svg"
+            src="/illustration/illustration6.svg"
             alt="Hero Illustration"
             width={400}
             height={400}

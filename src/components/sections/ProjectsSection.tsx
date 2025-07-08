@@ -7,6 +7,7 @@ import {motion, AnimatePresence} from 'framer-motion';
 import GlassCursor from '../ui/GlassCursor';
 import RandomFallbackImage from '../ui/RandomFallbackImage';
 import {LandingPageVideo} from '@/helpers/constants';
+import GradientName from '../ui/GradientName';
 
 export default function ProjectSection() {
   const [selectedTag, setSelectedTag] = useState<IProjectTag>('All');
@@ -47,9 +48,14 @@ export default function ProjectSection() {
       <div className="absolute inset-0 bg-black/60 z-0" />
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-          🚀 My Projects
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-white">
+          Recent Achievements and
+          <br />
+          <GradientName text="Projects" />
         </h2>
+        <p className="text-center text-amber-50 mb-8 mt-2">
+          A curated list of impactful apps and platforms I&apos;ve developed across various domains including crypto, food delivery, fitness, and more.
+        </p>
 
         <div className="flex flex-wrap justify-center gap-3 mb-10">
           {PROJECT_TAGS.map(tag => (

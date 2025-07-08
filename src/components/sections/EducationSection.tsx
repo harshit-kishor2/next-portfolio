@@ -5,6 +5,7 @@ import {EDUCATION_DATA} from '@/data/education';
 import {motion, useInView} from 'framer-motion';
 import {cn} from '@/helpers/utils';
 import {FaGraduationCap} from 'react-icons/fa';
+import GradientName from '../ui/GradientName';
 
 export default function EducationSection() {
   const sectionRef = useRef(null);
@@ -14,16 +15,16 @@ export default function EducationSection() {
     <section
       id="education"
       ref={sectionRef}
-      className="relative min-h-screen py-20 bg-[#0d1a14] overflow-hidden text-white scroll-mt-24"
+      className="relative min-h-screen py-8 bg-[#0d1a14] overflow-hidden text-white scroll-mt-10"
     >
-      {/* Glowing Background Blobs */}
-      <div className="absolute w-60 h-60 bg-[#baff29] rounded-full blur-[120px] opacity-30 top-[-40px] left-[-40px] z-0" />
-      <div className="absolute w-72 h-72 bg-[#77ff90] rounded-full blur-[140px] opacity-20 bottom-[-60px] right-[-60px] z-0" />
-
-      <h2 className="text-4xl font-extrabold text-[#baff29] mb-16 text-center z-10 relative">
-        Education
+      <h2 className="text-2xl md:text-4xl font-extrabold text-center z-10 relative">
+        Degrees with
+        <br />
+        <GradientName text="Real Impact" />
       </h2>
-
+      <p className=" text-sm md:text-lg text-center z-10 relative text-white mb-8 mt-2">
+        Postgraduate and undergraduate degrees in Computer Applications laid the groundwork for my journey into software development.
+      </p>
       <div className="relative max-w-6xl mx-auto px-4 z-10">
         {/* Vertical stepper line */}
         <div className="hidden md:block absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-[2px] bg-green-800 z-0" />

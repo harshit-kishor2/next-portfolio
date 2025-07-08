@@ -4,6 +4,7 @@ import {useState} from 'react';
 import {AnimatePresence} from 'framer-motion';
 import {SkillCard, SkillModal} from '../ui';
 import {ISkillCategory, SKILLS_DATA} from '@/data/skills';
+import GradientName from '../ui/GradientName';
 
 export default function SkillsSection() {
   const [activeCategory, setActiveCategory] = useState<ISkillCategory | null>(null);
@@ -19,9 +20,14 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white">
-          🧠 My Skills
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white">
+          Top-Tier Tools for
+          <br />
+          <GradientName text="Exceptional Results" />
         </h2>
+        <p className="text-center text-gray-600 dark:text-gray-400 mb-8 mt-2">
+          Here are the core technologies, tools, and platforms I use to bring digital products to life — from idea to launch.
+        </p>
 
         <div className="flex justify-center flex-wrap gap-4 mb-8">
           {categories.map((cat) => (

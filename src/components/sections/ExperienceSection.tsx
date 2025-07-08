@@ -4,12 +4,13 @@ import {EXPERIENCE_DATA} from '@/data/experience';
 import {cn} from '@/helpers/utils';
 import {motion} from 'framer-motion';
 import {FaBriefcase} from 'react-icons/fa';
+import GradientName from '../ui/GradientName';
 
 export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="relative min-h-screen py-20 bg-black backdrop-blur-xs overflow-hidden scroll-mt-28 text-white"
+      className="relative min-h-screen py-10 bg-black backdrop-blur-xs overflow-hidden scroll-mt-10 text-white"
     >
       <video
         className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none blur-xs opacity-90"
@@ -20,19 +21,20 @@ export default function ExperienceSection() {
       >
         <source src={'/video/video1.mp4'} type="video/mp4" />
       </video>
-      {/* Blurred Glowing Background Circles */}
-      <div className="absolute w-60 h-60 bg-white/10 rounded-full blur-[120px] opacity-20 top-[-40px] left-[-40px] z-0" />
-      <div className="absolute w-72 h-72 bg-white/10 rounded-full blur-[140px] opacity-10 bottom-[-60px] right-[-60px] z-0" />
-
-      <h2 className="text-4xl font-extrabold mb-16 text-center z-10 relative">
-        Experience
+      <h2 className="text-2xl md:text-4xl font-extrabold text-center z-10 relative">
+        Over 5 Years of Experience in
+        <br />
+        <GradientName text="Mobile App Development" />
       </h2>
+      <p className=" text-sm md:text-lg text-center z-10 relative text-white mb-8 mt-2">
+        Over 5 years of experience building scalable mobile apps, mentoring developers, and architecting solutions using modern stacks.
+      </p>
 
-      <div className="relative max-w-6xl mx-auto px-4 z-10">
+      <div className="relative max-w-7xl mx-auto z-10">
         {/* Vertical timeline line */}
         <div className="hidden md:block absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 w-[2px] bg-white/20 z-0" />
 
-        <div className="space-y-28">
+        <div className="space-y-12 md:space-y-32">
           {EXPERIENCE_DATA.map((exp, index) => {
             const isLeft = index % 2 === 0;
 
@@ -69,7 +71,7 @@ export default function ExperienceSection() {
                 </div>
 
                 {/* Card */}
-                <div className="relative group w-full md:w-1/2 md:max-w-md z-10 order-2 md:order-1">
+                <div className="relative group w-full md:w-[60%] md:max-w-xl z-10 order-2 md:order-1 ">
                   {/* Optional glowing wrapper */}
                   <div className="absolute inset-0 rounded-3xl p-[1.5px] blur-3xl opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -78,8 +80,8 @@ export default function ExperienceSection() {
                     transition={{type: 'spring', stiffness: 300}}
                     className={cn(
                       'relative p-6 rounded-3xl',
-                      'bg-white/40 ',
-                      'backdrop-blur-xl',
+                      'bg-white/20 ',
+                      'backdrop-blur-xxl',
                       'border border-white/10',
                       'shadow-[0_4px_30px_rgba(255,255,255,0.05)]'
                     )}
