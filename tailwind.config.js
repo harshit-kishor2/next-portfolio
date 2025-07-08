@@ -15,6 +15,7 @@ module.exports = {
         gradient: 'gradient 5s ease infinite',
         'spin-slow': 'spin-slow 8s linear infinite',
         glow: 'glow 2s ease-in-out infinite',
+        pulse: 'pulse 4s ease-in-out infinite',
       },
       keyframes: {
         wiggle: {
@@ -41,6 +42,9 @@ module.exports = {
       blur: {
         120: '120px',
         140: '140px',
+      },
+      backdropBlur: {
+        xs: '2px',
       },
     },
   },

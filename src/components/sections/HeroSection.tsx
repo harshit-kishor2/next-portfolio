@@ -6,6 +6,7 @@ import {BiChevronDown} from 'react-icons/bi';
 import ParticlesBackground from '../ui/ParticlesBackground';
 import TypewriterHeading from '../ui/TypewriterHeading';
 import GradientName from '../ui/GradientName';
+import {useEffect, useState} from 'react';
 
 const stats = [
   {title: 'Projects', value: 15},
@@ -14,14 +15,23 @@ const stats = [
 ];
 
 export default function HeroSection() {
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollIndicator(window.scrollY < 50); // Hide after scrolling 50px
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-[#0f172a]" id="home">
+    <section className="relative min-h-screen w-full overflow-hidden bg-[#0c0c0c]" id="home">
       <ParticlesBackground />
 
-      <div className="relative z-10 min-h-screen w-full px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-10">
+      <div className="relative z-10 min-h-screen w-full px-6 py-20 md:py-14 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Left Content */}
         <div className="flex-1 space-y-6 text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold text-white">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white">
             Hi, I&apos;m <GradientName text="Harshit Kishor" />
           </h1>
 
@@ -62,11 +72,18 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-4 w-full flex justify-center z-10">
-        <a href="#projects" className="text-white animate-bounce">
-          <BiChevronDown size={32} />
-        </a>
-      </div>
+      {showScrollIndicator && (
+        <motion.div
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          exit={{opacity: 0}}
+          className="absolute bottom-4 w-full flex justify-center z-10"
+        >
+          <a href="#skills" className="text-white animate-bounce">
+            <BiChevronDown size={32} />
+          </a>
+        </motion.div>
+      )}
     </section>
   );
 }

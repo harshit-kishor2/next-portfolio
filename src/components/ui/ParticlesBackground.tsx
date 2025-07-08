@@ -34,12 +34,8 @@ const ParticlesBackground = () => {
   const options: ISourceOptions = useMemo(() => {
     const op: ISourceOptions = {
       background: {
-        color: {value: '#0D0D0D'}, // Transparent to show gradient
+        color: {value: '#0c0c0c'}, // Transparent to show gradient
       },
-      // fullScreen: {
-      //   enable: true,
-      //   zIndex: 0,
-      // },
       fullScreen: {enable: false},
       particles: {
         color: {value: getThemeColors()},
