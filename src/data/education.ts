@@ -12,6 +12,17 @@ export interface IEducation {
 
 const education: IEducation[] = [
   {
+    "id": 2,
+    "degree": "Master of Computer Applications",
+    "field": "Computer Applications",
+    "institution": "Babasaheb Bhimrao Ambedkar University, Lucknow",
+    "duration": "2017 - 2020",
+    "startYear": 2017,
+    "endYear": 2020,
+    "location": "Lucknow (UP), India",
+    "grade": "8.25 CGPA"
+  },
+  {
     "id": 1,
     "degree": "Bachelor of Computer Applications",
     "field": "Computer Applications",
@@ -22,17 +33,6 @@ const education: IEducation[] = [
     "location": "Barabanki (UP), India",
     "grade": "71.33%",
   },
-  {
-    "id": 2,
-    "degree": "Master of Computer Applications",
-    "field": "Computer Applications",
-    "institution": "Babasaheb Bhimrao Ambedkar University, Lucknow",
-    "duration": "2017 - 2020",
-    "startYear": 2017,
-    "endYear": 2020,
-    "location": "Lucknow (UP), India",
-    "grade": "8.25 CGPA"
-  }
 ];
 
 export const EDUCATION_DATA: IEducation[] = education;
