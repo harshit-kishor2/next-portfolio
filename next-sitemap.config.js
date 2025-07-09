@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://yourdomain.com', // 🔁 Replace with your domain
+  siteUrl: 'https://harshit-resume.netlify.app', // 🔁 Replace with your domain
   generateRobotsTxt: true,
   generateIndexSitemap: true,
   sitemapSize: 5000,

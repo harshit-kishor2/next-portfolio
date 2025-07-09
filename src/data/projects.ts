@@ -104,7 +104,7 @@ const projects: IProject[] = [
     "thumbnail": "https://harshit-kishor2.github.io/portfolio-assets/images/projects/suntec.png",
     "images": [],
     "link": {
-      "playStore": ""
+      website: "https://sunteccity.com.sg/"
     }
   },
   {

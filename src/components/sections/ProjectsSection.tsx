@@ -88,20 +88,13 @@ export default function ProjectSection() {
             >
               <GlassCursor hovering={isHoveringCard} />
 
-              {project.thumbnail && (
-                <div className="relative h-40">
-                  {/* <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="object-cover w-full h-full"
-                  /> */}
-                  <RandomFallbackImage
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="object-contain w-full h-full"
-                  />
-                </div>
-              )}
+              <div className="relative h-40">
+                <RandomFallbackImage
+                  src={project.thumbnail || ''}
+                  alt={project.title}
+                  className="object-contain w-full h-full"
+                />
+              </div>
 
               <div className="p-5">
                 <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
@@ -150,23 +143,20 @@ export default function ProjectSection() {
                 </button>
               </div>
 
-              {activeProject.images?.[0] && (
-                <div className="relative w-full h-52 mb-4 rounded-md overflow-hidden">
-                  <RandomFallbackImage
-                    src={activeProject.images[0]}
-                    alt={activeProject.title}
-                    className="object-contain w-full h-full"
-                  />
-                </div>
-              )}
-
+              <div className="relative w-full h-52 mb-4 rounded-md overflow-hidden">
+                <RandomFallbackImage
+                  src={activeProject.thumbnail || ''}
+                  alt={activeProject.title}
+                  className="object-contain w-full h-full"
+                />
+              </div>
               <p className="text-gray-300 mb-4 text-sm">
                 {activeProject.description}
               </p>
 
               <ul className="list-disc pl-6 mb-4 text-sm text-gray-300 space-y-1">
                 {activeProject.features.map((f: string, i: number) => (
-                  <li key={i}>{f}</li>
+                  <li key={i.toString() + '_list'}>{f}</li>
                 ))}
               </ul>
 
@@ -182,7 +172,7 @@ export default function ProjectSection() {
               </div>
 
               <div className="flex flex-wrap gap-3 text-sm">
-                {Object.entries(activeProject.link || {}).map(([key, value]) => (
+                {Object.entries(activeProject.link || {}).map(([key, value]) => value && (
                   <a
                     key={key}
                     href={value}
