@@ -17,11 +17,11 @@ const skills = [
     "items": [
       {"name": "React Native", "level": 95, "icon": "https://cdn.simpleicons.org/react", "tooltip": "Build cross-platform mobile apps with native performance."},
       {"name": "Expo", "level": 90, "icon": "https://cdn.simpleicons.org/expo", "tooltip": "A framework and platform for universal React apps."},
-      {"name": "React.js", "level": 90, "icon": "https://cdn.simpleicons.org/react", "tooltip": "Build dynamic and modern web UIs."},
-      {"name": "JavaScript", "level": 95, "icon": "https://cdn.simpleicons.org/javascript", "tooltip": "The programming language of the web."},
-      {"name": "TypeScript", "level": 85, "icon": "https://cdn.simpleicons.org/typescript", "tooltip": "JavaScript with static types for better tooling and readability."},
-      {"name": "Dart", "level": 80, "icon": "https://cdn.simpleicons.org/dart", "tooltip": "Google’s client-optimized language for fast apps."},
+      {"name": "Next.js", "level": 90, "icon": "https://cdn.simpleicons.org/nextdotjs", "tooltip": "Build dynamic and modern web UIs."},
       {"name": "Flutter", "level": 80, "icon": "https://cdn.simpleicons.org/flutter", "tooltip": "UI toolkit to build beautiful, natively compiled apps."},
+      {"name": "TypeScript", "level": 85, "icon": "https://cdn.simpleicons.org/typescript", "tooltip": "JavaScript with static types for better tooling and readability."},
+      {"name": "JavaScript", "level": 95, "icon": "https://cdn.simpleicons.org/javascript", "tooltip": "The programming language of the web."},
+      {"name": "Dart", "level": 80, "icon": "https://cdn.simpleicons.org/dart", "tooltip": "Google’s client-optimized language for fast apps."},
       {"name": "Node.js", "level": 85, "icon": "https://cdn.simpleicons.org/nodedotjs", "tooltip": "JavaScript runtime for scalable server-side apps."},
       {"name": "Express.js", "level": 80, "icon": "https://cdn.simpleicons.org/express", "tooltip": "Minimal and flexible Node.js web application framework."},
       {"name": "Redux", "level": 90, "icon": "https://cdn.simpleicons.org/redux", "tooltip": "Predictable state container for JavaScript apps."},
@@ -72,7 +72,7 @@ const skills = [
       {"name": "WalletConnect", "level": 70, "icon": "https://cdn.simpleicons.org/walletconnect", "tooltip": "Connect web3 apps to mobile wallets with QR code scanning."},
       {"name": "Smart Contracts", "level": 65, "icon": "https://cdn.simpleicons.org/walletconnect", "tooltip": "Self-executing contracts with logic directly on blockchain."},
       {"name": "crypto", "level": 70, "icon": "https://cdn.simpleicons.org/cryptpad", "tooltip": "Working with cryptographic tools and tokens."},
-      {"name": "Web3.js", "level": 65, "icon": "https://cdn.simpleicons.org/web3js", "tooltip": "JavaScript library for interacting with Ethereum blockchain."}
+      {"name": "Web3.js", "level": 65, "icon": "https://cdn.simpleicons.org/web3dotjs", "tooltip": "JavaScript library for interacting with Ethereum blockchain."}
     ]
   },
   {

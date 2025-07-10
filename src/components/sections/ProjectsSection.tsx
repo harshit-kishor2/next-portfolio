@@ -6,7 +6,6 @@ import {useState, useMemo, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import GlassCursor from '../ui/GlassCursor';
 import RandomFallbackImage from '../ui/RandomFallbackImage';
-import {LandingPageVideo} from '@/helpers/constants';
 import GradientName from '../ui/GradientName';
 
 export default function ProjectSection() {
@@ -41,7 +40,7 @@ export default function ProjectSection() {
         loop
         playsInline
       >
-        <source src={LandingPageVideo} type="video/mp4" />
+        <source src={'/video/video1.mp4'} type="video/mp4" />
       </video>
 
       {/* Overlay (optional, to darken the video even more) */}

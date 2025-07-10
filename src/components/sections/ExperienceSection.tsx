@@ -5,6 +5,7 @@ import {cn} from '@/helpers/utils';
 import {motion} from 'framer-motion';
 import {FaBriefcase} from 'react-icons/fa';
 import GradientName from '../ui/GradientName';
+import {LandingPageVideo} from '@/helpers/constants';
 
 export default function ExperienceSection() {
   return (
@@ -19,7 +20,7 @@ export default function ExperienceSection() {
         loop
         playsInline
       >
-        <source src={'/video/video1.mp4'} type="video/mp4" />
+        <source src={LandingPageVideo} type="video/mp4" />
       </video>
       <h2 className="text-2xl md:text-4xl font-extrabold text-center z-10 relative">
         Over 5 Years of Experience in

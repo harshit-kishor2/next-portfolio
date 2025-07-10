@@ -6,7 +6,8 @@ import {useTypewriter, Cursor} from 'react-simple-typewriter';
 const titles = [
   'Mobile App Developer',
   'React Native Specialist',
-  'Firebase Enthusiast',
+  'Flutter Enthusiast',
+  'Open Source Contributor',
   'Lifelong Learner',
 ];
 
